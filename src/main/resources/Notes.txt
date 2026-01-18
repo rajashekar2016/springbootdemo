@@ -1,0 +1,55 @@
+POST
+http://localhost:8088/auth/register
+{
+    "username": "raj",
+    "password": "raj123",
+    "role": "ROLE_ADMIN"
+}
+
+POST
+http://localhost:8088/auth/login
+{
+    "username": "raj",
+    "password": "raj123"
+}
+
+POST
+http://localhost:8088/employee/save
+{
+    "firstName":"Pridvi",
+    "lastName": "Mahesh",
+    "email": "mahesh@gmail.com",
+    "phone": "98878979797"
+}
+
+GET
+http://localhost:8088/employee/fetchall
+http://localhost:8088/employee/fetch/1
+http://localhost:8088/employee/fetch/Krishna
+http://localhost:8088/employee/fetch/name/krishna/kumar
+http://localhost:8088/employee/fetchbypagination?page=0&size=2&sortBy=firstName&ascending=false
+http://localhost:8088/employee/fetchbypagination?page=0&size=2&sortBy=firstName&ascending=true
+
+PUT
+http://localhost:8088/employee/update/2
+
+{
+    "firstName":"Pridvi",
+    "lastName": "Ram",
+    "email": "ram@gmail.com",
+    "phone": "98878979797"
+}
+
+PATCH
+http://localhost:8088/employees/
+{
+  "email": "newemail@gmail.com",
+  "phone": "9999999999"
+}
+
+DELETE
+http://localhost:8088/employee/delete/3
+
+
+
+
